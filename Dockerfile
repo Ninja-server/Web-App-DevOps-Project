@@ -18,8 +18,8 @@ COPY . .
 
 ENV DB_SERVER=localhost
 ENV DB_DATABASE=database-1
-ENV DB_USERNAME={{ secrets.DB_USERNAME }}
-ENV DB_PASSWORD={{ secrets.DB_PASSWORD }}
+ENV DB_USERNAME=admin
+ENV DB_PASSWORD=admin1234
 
 
 CMD ["python", "app.py"]

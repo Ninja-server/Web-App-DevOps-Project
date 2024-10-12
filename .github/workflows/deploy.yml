@@ -16,6 +16,8 @@ jobs:
       - name: Set up Docker
         run: | 
           sudo apt-get update -y
+          sudo apt-get install -y unixodbc-dev
+          sudo pip install -vvv pyodbc
           sudo apt install docker.io -y
           sudo usermod -aG docker $USER && newgrp docker
           sudo chmod 777 /var/run/docker.sock

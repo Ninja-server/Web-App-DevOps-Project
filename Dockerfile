@@ -16,6 +16,12 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
+ENV DB_SERVER=localhost
+ENV DB_DATABASE=database-1
+ENV DB_USERNAME={{ secrets.DB_USERNAME }}
+ENV DB_PASSWORD={{ secrets.DB_PASSWORD }}
+
+
 CMD ["python", "app.py"]
 
 EXPOSE 5000
